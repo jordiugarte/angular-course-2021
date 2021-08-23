@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test3',
@@ -10,5 +10,18 @@ export class Test3Component {
   //  Crear input en componente
   @Input('status') statusTest: string = 'working';
 
+  //  Tarea 6
+  //  Crear output en componente
+  @Output('onSendData') sendData = new EventEmitter(null);
+
   constructor() {}
+
+  onClick(event: any) {
+    console.log('EVENT CLICK:', event);
+
+    this.sendData.emit({
+      name: 'ricardo',
+      status: 'busy'
+    });
+  }
 }

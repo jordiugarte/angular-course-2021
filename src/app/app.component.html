@@ -3,4 +3,4 @@
   Start editing to see some magic happen :)
 </p>
 
-<app-test3></app-test3>
+<app-test3 status="busy" [status]="myStatus" (onSendData)="printData($event)"></app-test3>

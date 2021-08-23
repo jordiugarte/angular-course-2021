@@ -7,6 +7,7 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
+  myStatus = 'my status';
 
   constructor() {
     //  Tarea 1
@@ -25,5 +26,9 @@ export class AppComponent {
     //  Filtrar los números impares y mostrarlos como cadena
     const arr2 = [1, 2, 3, 4, 5, 6];
     console.log('Ejercicio 2: ', arr2.filter(item => item % 2 === 1).join(','));
+  }
+
+  printData(event: any) {
+    console.log('RICARDO COMP:', event);
   }
 }
