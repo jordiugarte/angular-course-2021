@@ -3,6 +3,19 @@
 
 <p [directive1Test]="'red'" (outputTest)="test($event)">Ni primera directiva de atributo </p>
 
+<input type="text" [(ngModel)]="color">
+
+<p [directive1Test]="color" (outputTest)="test($event)">Ni primera directiva de atributo </p>
+
+
+<input type="checkbox" [(ngModel)]="sw"> ngIfRicardo
+
+<div *ngIfRicardo="sw" (test)="test100($event)">
+
+  <p>my own strcutural directive </p>
+
+</div>
+
 <p>
   observer works!
 </p>
