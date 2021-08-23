@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, ElementRef, VERSION, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -11,6 +11,10 @@ export class AppComponent {
 
   sw = true;
   color: string;
+
+  @ViewChild('myDiv1') myDiv1: ElementRef;
+  @ViewChild('myDiv2') myDiv2: ElementRef;
+  @ViewChild('myCompRicardo') myCompRicardo: any;
 
   constructor() {
     //  Tarea 1
@@ -34,5 +38,13 @@ export class AppComponent {
   printData(event: any) {
     console.log('RICARDO COMP:', event);
     console.log('CHILD COMP SEND DATA: ', event);
+  }
+
+  onShowLocalVars() {
+    console.log(this.myDiv1, this.myDiv2, this.myCompRicardo);
+
+    this.myCompRicardo.onClickTest();
+
+    this.myDiv2.nativeElement.value = 'ricardo';
   }
 }
