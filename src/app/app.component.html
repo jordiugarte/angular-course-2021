@@ -84,9 +84,11 @@
 <div #myDiv1>contnet</div>
 <p>{{myDiv1}}</p>
 
-<ricardo-comp #myCompRicardo></ricardo-comp>
+<div #myCompRicardo></div>
 
 <input type="text" #myDiv2 value="asdasd">
 <p>{{myDiv2}}</p>
 
 <button (click)="onShowLocalVars()">show local vars</button>
+
+<div #myButton (click)="moreBorder()" style="border-width:1px; color: black;">Boton</div>

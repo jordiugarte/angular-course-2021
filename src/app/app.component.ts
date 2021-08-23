@@ -16,6 +16,8 @@ export class AppComponent {
   @ViewChild('myDiv2') myDiv2: ElementRef;
   @ViewChild('myCompRicardo') myCompRicardo: any;
 
+  @ViewChild('myButton') myButton: ElementRef;
+
   constructor() {
     //  Tarea 1
     //  Convertir un array y sumar los números pares
@@ -46,5 +48,10 @@ export class AppComponent {
     this.myCompRicardo.onClickTest();
 
     this.myDiv2.nativeElement.value = 'ricardo';
+  }
+
+  moreBorder() {
+    console.log('My button');
+    this.myButton.nativeElement.border = '5px';
   }
 }
