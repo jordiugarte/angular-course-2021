@@ -30,5 +30,6 @@ export class AppComponent {
 
   printData(event: any) {
     console.log('RICARDO COMP:', event);
+    console.log('CHILD COMP SEND DATA: ', event);
   }
 }
