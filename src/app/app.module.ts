@@ -8,6 +8,7 @@ import { Test3Component } from './test3/test3.component';
 import { CustomComponentComponent } from './custom-component/custom-component.component';
 import { Test2Component } from './test2/test2.component';
 import { Test4Component } from './test4/test4.component';
+import { Test33Component } from './test33/test33.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -17,6 +18,7 @@ import { Test4Component } from './test4/test4.component';
     Test2Component,
     Test3Component,
     Test4Component,
+    Test33Component,
     CustomComponentComponent
   ],
   bootstrap: [AppComponent]
