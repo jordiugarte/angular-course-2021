@@ -12,9 +12,10 @@ import { Test33Component } from './test33/test33.component';
 import { DatalistComponent } from './datalist/datalist.component';
 import { ObserverComponent } from './observer/observer.component';
 import { Directive1Directive } from './directive1.directive';
+import { Module1Module } from './module1/module1.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, Module1Module],
   declarations: [
     AppComponent,
     HelloComponent,
