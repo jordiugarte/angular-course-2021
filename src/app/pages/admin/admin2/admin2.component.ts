@@ -28,13 +28,12 @@ export class Admin2Component implements OnInit {
 
   ngOnInit() {
   }
-
-  /** 
-   * @params name 
-   * @params lastName 
+  /**
+   * @params name
+   * @params lastName
    * return name and lastName joined
   */
-  public testParams(name:string, lastName: string = 'gutierrez'): string{
+   public testParams(name:string, lastName?: string): string{
     const aux = 'juan';
     console.log((name ?? aux)  + ' ' + lastName)
     return name + ' ' + lastName;

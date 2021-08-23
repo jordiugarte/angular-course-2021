@@ -1,8 +1,11 @@
+ADMIN 1 COMP
+
+<p>{{ 50 | exponent }}</p>
+
 <p>{{ name }}</p>
 <p>{{ name | uppercase }}</p>
 
-<p>{{ 'MARIA' | lowercase }}</p>
-
+@@ -11,7 +13,7 @@
 <p>{{ ['a','b','c','d','e'] | slice:2:4 }}</p>
 
 <p *ngFor="let item of ['a','b','c','d','e'] | slice:2:4">
@@ -10,16 +13,10 @@
 </p>
 
 <p>{{ auxJSON | json }}</p>
-
-<p>
-  admin1 works!
-</p>
-
-<app-loader></app-loader>
-<app-card></app-card>
+@@ -25,10 +27,10 @@
 
 <p *ngFor="let item of auxObs$ | async">
-  {{item}} {{item}}
+  {{item}}
 </p>
 
 <button (click)="onAdd()">add</button>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test2',
@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test2.component.css']
 })
 export class Test2Component {
-  constructor() {
-    //  Tarea 4
-    //  Crear componente desde el CLI
-  }
+  @Input() name: string;
+  @Input() lastName: string;
+  @Output() onSendData = new EventEmitter(null);
+
+  constructor() {}
 }
