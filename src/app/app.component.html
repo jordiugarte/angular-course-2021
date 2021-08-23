@@ -15,3 +15,11 @@
 </div>
 
 <app-test33></app-test33>
+
+<span *ngFor="let item of ['first', 'second', 'thrid']; let i = index;">
+<app-test3
+*ngIf="item !== 'first'"
+[status]="item" 
+(onSendData)="printData($event)">
+</app-test3>
+</span>
