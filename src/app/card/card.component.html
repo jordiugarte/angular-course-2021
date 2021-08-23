@@ -1,6 +1,10 @@
-<div style="background: {{color}}; width: 150px; height: 150px;" #cardDiv>
-  <p>{{item.name}}</p>
-  <button *ngIf="!item.vaccined" (click)="vaccine()">
+<div style="background: {{color}}; width: 150px; height: 250px;" #cardDiv>
+  <p>Name: {{item.name | uppercase}}</p>
+  <p>Age: {{item.age}}</p>
+  <p>Date: {{item.date}}</p>
+  <p>Vaccined: {{vaccined ? 'yes' : 'no'}}</p>
+  <p>Enfermedad de base: {{item.disease ? 'Sí' : 'No'}}</p>
+  <button *ngIf="vaccinable" (click)="vaccine()">
     Vacunar
   </button>
 </div>

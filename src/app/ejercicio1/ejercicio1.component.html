@@ -2,10 +2,12 @@
   ¡Todos vacunados!
 </p>
 
+<p>Vacunados: {{vaccinated.length}}</p>
 <span *ngFor="let item of vaccinated">
   <app-card [item]="item" (update) = "item"></app-card>
 </span>
 
+<p>No vacunados: {{notVaccinated.length}}</p>
 <span *ngFor="let item of notVaccinated">
   <app-card [item]="item" (update) = "item"></app-card>
 </span>
