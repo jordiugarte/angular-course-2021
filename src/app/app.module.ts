@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { Test3Component } from './test3/test3.component';
 import { CustomComponentComponent } from './custom-component/custom-component.component';
+import { Test2Component } from './test2/test2.component';
+import { Test4Component } from './test4/test4.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [
     AppComponent,
     HelloComponent,
+    Test2Component,
     Test3Component,
+    Test4Component,
     CustomComponentComponent
   ],
   bootstrap: [AppComponent]

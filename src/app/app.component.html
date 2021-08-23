@@ -4,3 +4,12 @@
 </p>
 <app-test3 status="busy" [status]="myStatus" (onSendData)="printData($event)"></app-test3>
 <app-custom-component name="Jorge" lastName="Ramallo" (onSendData)="printData($event)"></app-custom-component>
+
+<input type="text" [(ngModel)]="myStatus">
+
+
+<button (click)="sw = !sw">SHOW TEST3</button>
+<div *ngIf="sw">
+  <app-test4 [name]="myStatus">
+  </app-test4>
+</div>

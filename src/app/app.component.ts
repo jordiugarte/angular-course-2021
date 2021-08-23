@@ -9,6 +9,8 @@ export class AppComponent {
   name = 'Angular ' + VERSION.major;
   myStatus = 'my status';
 
+  sw = true;
+
   constructor() {
     //  Tarea 1
     //  Convertir un array y sumar los números pares
