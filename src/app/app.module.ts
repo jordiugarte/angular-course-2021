@@ -10,6 +10,7 @@ import { Test2Component } from './test2/test2.component';
 import { Test4Component } from './test4/test4.component';
 import { Test33Component } from './test33/test33.component';
 import { DatalistComponent } from './datalist/datalist.component';
+import { ObserverComponent } from './observer/observer.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -21,7 +22,8 @@ import { DatalistComponent } from './datalist/datalist.component';
     Test4Component,
     Test33Component,
     DatalistComponent,
-    CustomComponentComponent
+    CustomComponentComponent,
+    ObserverComponent
   ],
   bootstrap: [AppComponent]
 })

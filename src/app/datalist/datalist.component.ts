@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./datalist.component.css']
 })
 export class DatalistComponent implements OnInit {
-//  mostrar una lista de personas dinámicamente con *ngFor
-//  mediante un componente ingresando name y lastName
-
+  //  mostrar una lista de personas dinámicamente con *ngFor
+  //  mediante un componente ingresando name y lastName
 
   info = [
     { name: 'juan', lastName: 'gutierrez' },
