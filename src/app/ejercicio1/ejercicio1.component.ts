@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ejercicio1',
@@ -102,15 +102,7 @@ export class Ejercicio1Component implements OnInit {
   vaccinated = this.data.filter(item => item.vaccined === 1);
   notVaccinated = this.data.filter(item => item.vaccined === 0);
 
-  @Input('vaccinatedQuantity') vaccinatedQuantity: any;
-
   constructor() {}
 
   ngOnInit() {}
-
-  @Input('update') updateList(item: any) {
-    if (item.vaccined === 1) {
-      this.notVaccinated.reduce(item);
-    }
-  }
 }

@@ -15,7 +15,6 @@ import {
 })
 export class CardComponent implements OnInit {
   @Input('item') item: any;
-  @Output('update') update = new EventEmitter();
 
   @ViewChild('cardDiv') cardDiv: ElementRef;
 

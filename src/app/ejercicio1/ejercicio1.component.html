@@ -1,11 +1,11 @@
-<p *ngIf="vaccinatedQuantity === 0">
+<p>
   ¡Todos vacunados!
 </p>
 
 <span *ngFor="let item of vaccinated">
-  <app-card [item]="item"></app-card>
+  <app-card [item]="item" (update) = "item"></app-card>
 </span>
 
 <span *ngFor="let item of notVaccinated">
-  <app-card [item]="item" [(update)] = "item"></app-card>
+  <app-card [item]="item" (update) = "item"></app-card>
 </span>
