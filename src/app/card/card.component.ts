@@ -39,8 +39,6 @@ export class CardComponent implements OnInit {
 
   vaccine() {
     this.item.vaccined = 1;
-    this.ngOnInit();
-    console.log('item', this.item);
     this.update.emit(this.item);
   }
 }

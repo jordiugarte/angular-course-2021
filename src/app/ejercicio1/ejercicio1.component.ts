@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ejercicio1',
@@ -99,10 +99,20 @@ export class Ejercicio1Component implements OnInit {
     }
   ];
 
-  vaccinated = this.data.filter(item => item.vaccined === 1);
-  notVaccinated = this.data.filter(item => item.vaccined === 0);
+  vaccinated: any;
+  notVaccinated: any;
+
+  update(event: any) {
+    console.log('item', event);
+    let index = this.data.findIndex(item => item.name === event.name);
+    this.data[index] = event;
+    this.ngOnInit();
+  }
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.vaccinated = this.data.filter(item => item.vaccined === 1);
+    this.notVaccinated = this.data.filter(item => item.vaccined === 0);
+  }
 }
