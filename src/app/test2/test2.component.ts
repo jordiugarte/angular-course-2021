@@ -5,11 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './test2.component.html',
   styleUrls: ['./test2.component.css']
 })
-export class Test2Component implements OnInit {
+export class Test2Component {
   constructor() {
     //  Tarea 4
     //  Crear componente desde el CLI
   }
-
-  ngOnInit() {}
 }
