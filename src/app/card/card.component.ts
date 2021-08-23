@@ -38,7 +38,20 @@ export class CardComponent implements OnInit {
   }
 
   vaccine() {
-    this.item.vaccined = 1;
+    var maxDoses = 0;
+    switch (this.item.vaccineType) {
+      case 'A':
+        maxDoses = 1;
+      case 'B':
+        maxDoses = 2;
+      case 'C':
+        maxDoses = 3;
+    }
+    if (this.item.doses < maxDoses - 1) {
+      this.item.doses += 1;
+    } else {
+      this.item.vaccined = 1;
+    }
     this.update.emit(this.item);
   }
 }
