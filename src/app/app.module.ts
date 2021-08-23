@@ -17,6 +17,8 @@ import { AdminModule } from './pages/admin/admin.module';
 import { HomeModule } from './pages/home/home.module';
 import { BuyModule } from './pages/buy/buy.module';
 
+//  18/08/2021 task modules
+
 @NgModule({
   imports: [
     BrowserModule,
