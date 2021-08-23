@@ -1,0 +1,30 @@
+<p>{{ name }}</p>
+<p>{{ name | uppercase }}</p>
+
+<p>{{ 'MARIA' | lowercase }}</p>
+
+
+<p>{{ ['a','b','c','d','e'] | slice:2:4 }}</p>
+
+<p *ngFor="let item of ['a','b','c','d','e'] | slice:2:4">
+  {{item}}
+</p>
+
+<p>{{ auxJSON | json }}</p>
+
+<p>
+  admin1 works!
+</p>
+
+<app-loader></app-loader>
+<app-card></app-card>
+
+
+</div>
+
+
+<p *ngFor="let item of auxObs$ | async">
+  {{item}}
+</p>
+
+<button (click)="onAdd()">add</button>
