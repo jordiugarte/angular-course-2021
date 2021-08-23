@@ -28,7 +28,7 @@ export class Test4Component
     AfterContentChecked {
   @Input() name;
 
-  //  Tarea 10 Lifecycle
+  //  Tarea 9 Lifecycle
 
   constructor() {
     console.log('CONTRUCTOR');
