@@ -13,9 +13,19 @@ import { DatalistComponent } from './datalist/datalist.component';
 import { ObserverComponent } from './observer/observer.component';
 import { Directive1Directive } from './directive1.directive';
 import { Module1Module } from './module1/module1.module';
+import { AdminModule } from './pages/admin/admin.module';
+import { HomeModule } from './pages/home/home.module';
+import { BuyModule } from './pages/buy/buy.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, Module1Module],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    Module1Module,
+    HomeModule,
+    AdminModule,
+    BuyModule
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
