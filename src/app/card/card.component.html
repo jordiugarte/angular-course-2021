@@ -1,0 +1,6 @@
+<div style="background: {{color}}; width: 150px; height: 150px;" #cardDiv>
+  <p>{{item.name}}</p>
+  <button *ngIf="!item.vaccined" (click)="vaccine()">
+    Vacunar
+  </button>
+</div>
