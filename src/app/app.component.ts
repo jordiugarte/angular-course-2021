@@ -10,6 +10,7 @@ export class AppComponent {
   myStatus = 'my status';
 
   sw = true;
+  color: string;
 
   constructor() {
     //  Tarea 1
