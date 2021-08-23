@@ -16,6 +16,7 @@ import { Module1Module } from './module1/module1.module';
 import { AdminModule } from './pages/admin/admin.module';
 import { HomeModule } from './pages/home/home.module';
 import { BuyModule } from './pages/buy/buy.module';
+import { CoreModule } from './core/core.module';
 
 //  18/08/2021 task modules
 
@@ -26,7 +27,8 @@ import { BuyModule } from './pages/buy/buy.module';
     Module1Module,
     HomeModule,
     AdminModule,
-    BuyModule
+    BuyModule,
+    CoreModule
   ],
   declarations: [
     AppComponent,
