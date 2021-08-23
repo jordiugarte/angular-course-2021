@@ -11,6 +11,7 @@ import { Test4Component } from './test4/test4.component';
 import { Test33Component } from './test33/test33.component';
 import { DatalistComponent } from './datalist/datalist.component';
 import { ObserverComponent } from './observer/observer.component';
+import { Directive1Directive } from './directive1.directive';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -23,7 +24,8 @@ import { ObserverComponent } from './observer/observer.component';
     Test33Component,
     DatalistComponent,
     CustomComponentComponent,
-    ObserverComponent
+    ObserverComponent,
+    Directive1Directive
   ],
   bootstrap: [AppComponent]
 })

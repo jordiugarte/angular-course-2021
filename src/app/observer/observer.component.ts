@@ -43,4 +43,8 @@ export class ObserverComponent {
     this.personASub.unsubscribe();
     console.log('PERSON A SE DESUSCRIBE');
   }
+
+  test(event) {
+    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAA', event);
+  }
 }
