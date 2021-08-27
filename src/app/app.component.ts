@@ -6,52 +6,25 @@ import { Component, ElementRef, VERSION, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
-  myStatus = 'my status';
-
-  sw = true;
-  color: string;
-
-  @ViewChild('myDiv1') myDiv1: ElementRef;
-  @ViewChild('myDiv2') myDiv2: ElementRef;
-  @ViewChild('myCompRicardo') myCompRicardo: any;
-
-  @ViewChild('myButton') myButton: ElementRef;
-
+  
   constructor() {
-    //  Tarea 1
-    //  Convertir un array y sumar los números pares
-    const arr1 = { 1: 'a', 2: 'a', 3: 'a', 4: 'a', 5: 'a', 6: 'a' };
-    const arr1Even = Object.keys(arr1)
-      .map(n => parseInt(n))
-      .reduce((acc, value) => {
-        if (value % 2 === 0) {
-          acc += value;
-        }
-        return acc;
-      }, 0);
-    console.log('Ejercicio 1: ', arr1Even);
+    this.pure(2,3);
+    this.pure(10,2);
+    this.pure(5,5);
 
-    //  Filtrar los números impares y mostrarlos como cadena
-    const arr2 = [1, 2, 3, 4, 5, 6];
-    console.log('Ejercicio 2: ', arr2.filter(item => item % 2 === 1).join(','));
+    this.impure(2,3);
+    this.impure(10,2);
+    this.impure(5,5);
   }
 
-  printData(event: any) {
-    console.log('RICARDO COMP:', event);
-    console.log('CHILD COMP SEND DATA: ', event);
+  pure(a:number, b:number){
+    console.log(a + b)
+    return a + b;
   }
 
-  onShowLocalVars() {
-    console.log(this.myDiv1, this.myDiv2, this.myCompRicardo);
-
-    this.myCompRicardo.onClickTest();
-
-    this.myDiv2.nativeElement.value = 'ricardo';
-  }
-
-  moreBorder() {
-    console.log('My button');
-    this.myButton.nativeElement.border = '5px';
+  impure(a:number, b:number){
+    const aux = Math.random();
+    console.log( a + b + aux)
+    return a + b + aux;
   }
 }
