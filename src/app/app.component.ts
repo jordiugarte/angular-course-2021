@@ -6,25 +6,26 @@ import { Component, ElementRef, VERSION, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  constructor() {
-    this.pure(2,3);
-    this.pure(10,2);
-    this.pure(5,5);
+  data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    this.impure(2,3);
-    this.impure(10,2);
-    this.impure(5,5);
+  constructor() {
+    this.pure(2, 3);
+    this.pure(10, 2);
+    this.pure(5, 5);
+
+    this.impure(2, 3);
+    this.impure(10, 2);
+    this.impure(5, 5);
   }
 
-  pure(a:number, b:number){
-    console.log(a + b)
+  pure(a: number, b: number) {
+    console.log(a + b);
     return a + b;
   }
 
-  impure(a:number, b:number){
+  impure(a: number, b: number) {
     const aux = Math.random();
-    console.log( a + b + aux)
+    console.log(a + b + aux);
     return a + b + aux;
   }
 }

@@ -15,6 +15,7 @@ import { Directive1Directive } from './directive1.directive';
 import { Module1Module } from './module1/module1.module';
 import { AdminModule } from './pages/admin/admin.module';
 import { HomeModule } from './pages/home/home.module';
+import { SharedModule } from './shared/shared.module';
 import { BuyModule } from './pages/buy/buy.module';
 import { CoreModule } from './core/core.module';
 
@@ -28,6 +29,7 @@ import { CoreModule } from './core/core.module';
     HomeModule,
     AdminModule,
     BuyModule,
+    SharedModule,
     CoreModule
   ],
   declarations: [
