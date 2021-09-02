@@ -19,7 +19,21 @@ import { SharedModule } from './shared/shared.module';
 import { BuyModule } from './pages/buy/buy.module';
 import { CoreModule } from './core/core.module';
 
-//  18/08/2021 task modules
+import { View1Component } from './view1/view1.component';
+import {RouterModule, Routes} from "@angular/router";
+import { View2Component } from './view2/view2.component';
+
+const routes: Routes = [
+  {
+    path: '', redirectTo: 'view1', pathMatch: 'full'
+  },
+  {
+    path: 'view1', component: View1Component
+  },
+  {
+    path: 'view2', component: View2Component
+  }
+];
 
 @NgModule({
   imports: [
@@ -30,7 +44,9 @@ import { CoreModule } from './core/core.module';
     AdminModule,
     BuyModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    SharedModule,
+    RouterModule.forRoot(routes)
   ],
   declarations: [
     AppComponent,
@@ -42,8 +58,12 @@ import { CoreModule } from './core/core.module';
     DatalistComponent,
     CustomComponentComponent,
     ObserverComponent,
-    Directive1Directive
+    Directive1Directive,
+    Directive2Directive,
+    View1Component,
+    View2Component
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
