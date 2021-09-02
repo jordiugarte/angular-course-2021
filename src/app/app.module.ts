@@ -40,7 +40,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'view2',
+    path: 'view2/:id/sub/:id2',
     component: View2Component
   },
   {
