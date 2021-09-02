@@ -11,5 +11,6 @@ export class View2Component implements OnInit {
 
   ngOnInit(): void {
     console.log('SNAPSHOT', this.router.snapshot.params);
+    
   }
 }
