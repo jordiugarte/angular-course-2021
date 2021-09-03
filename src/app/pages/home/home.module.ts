@@ -7,7 +7,6 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
-  declarations: [HomeModule]
+  imports: [CommonModule, RouterModule.forChild(routes)]
 })
 export class HomeModule {}
