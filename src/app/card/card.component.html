@@ -1,0 +1,12 @@
+<div style="background: {{color}}; width: 200px; height: 300px;" #cardDiv>
+  <p>Name: {{item.name | uppercase}}</p>
+  <p>Age: {{item.age}}</p>
+  <p>Date: {{item.date | dateFormat | date: 'dd/MM/yyyy'}}</p>
+  <p>Vaccined: {{vaccined ? 'yes' : 'no'}}</p>
+  <p>Enfermedad de base: {{item.disease ? 'Sí' : 'No'}}</p>
+  <p>Cantidad de dosis: {{item.doses}}</p>
+  <p>Tipo de vacuna: {{item.vaccineType}}</p>
+  <button *ngIf="vaccinable" (click)="vaccine()">
+  Vacunar
+</button>
+</div>
