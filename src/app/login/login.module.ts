@@ -8,13 +8,17 @@ import {
   NgbModule,
   NgbToastModule
 } from '@ng-bootstrap/ng-bootstrap';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const routes: Routes = [{ path: '', component: LoginComponent }];
 @NgModule({
   declarations: [LoginComponent],
   imports: [
+    MatProgressSpinnerModule,
     NgbToastModule,
     NgbButtonsModule,
+    MatSliderModule,
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes)
