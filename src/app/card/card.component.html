@@ -6,7 +6,7 @@
   <p>Enfermedad de base: {{item.disease ? 'Sí' : 'No'}}</p>
   <p>Cantidad de dosis: {{item.doses}}</p>
   <p>Tipo de vacuna: {{item.vaccineType}}</p>
-  <button *ngIf="vaccinable" (click)="vaccine()">
+  <button *ngIf="!vaccined" [disabled]="!vaccinable" (click)="vaccine()">
   Vacunar
 </button>
 </div>

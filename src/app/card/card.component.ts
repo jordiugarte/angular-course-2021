@@ -35,8 +35,7 @@ export class CardComponent implements OnInit {
     this.baseDisease = this.item.disease;
     this.adult = this.item.age >= 18;
     this.color = this.vaccined ? 'green' : 'red';
-    //this.vaccinable = this.adult && !this.baseDisease && !this.vaccined;
-    this.vaccinable = !this.vaccined;
+    this.vaccinable = this.adult && !this.baseDisease && !this.vaccined;
   }
 
   vaccine() {
@@ -55,6 +54,6 @@ export class CardComponent implements OnInit {
       this.item.vaccined = 1;
     }
     this.update.emit(this.item);*/
-    service.vaccine(item.key);
+    this.service.vaccine({ key: this.item.key });
   }
 }

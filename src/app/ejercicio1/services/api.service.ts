@@ -24,4 +24,8 @@ export class Api {
   public delete(id: string): Observable<any> {
     return this.http.delete(this.url + id + '.json');
   }
+
+  public addDose(id: string, body: any): Observable<any> {
+    return this.http.put(this.url + id + '.json', body);
+  }
 }
