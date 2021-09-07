@@ -8,9 +8,10 @@ import { Ejercicio1Component } from './ejercicio1/ejercicio1.component';
 import { CardComponent } from './card/card.component';
 import { DateFormatPipe } from './date-format.pipe';
 import { Api } from './ejercicio1/services/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   declarations: [
     AppComponent,
     DateFormatPipe,

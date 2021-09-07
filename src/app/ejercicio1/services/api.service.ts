@@ -11,10 +11,14 @@ export class Api {
   constructor(private http: HttpClient) {}
 
   public getVaccinated(): Observable<any> {
-    return this.http.get(`${this.vaccinated_url}`);
+    return this.http.get(this.vaccinated_url);
   }
 
   public getUnvaccinated(): Observable<any> {
-    return this.http.get(`${this.unvaccinated_url}`);
+    return this.http.get(this.unvaccinated_url);
+  }
+
+  public vaccine(id: string): Observable<any> {
+    return this.http.get(this.unvaccinated_url + );
   }
 }
