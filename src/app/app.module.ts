@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { Ejercicio1Component } from './ejercicio1/ejercicio1.component';
 import { CardComponent } from './card/card.component';
 import { DateFormatPipe } from './date-format.pipe';
+import { Api } from './ejercicio1/services/api.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -17,6 +18,7 @@ import { DateFormatPipe } from './date-format.pipe';
     Ejercicio1Component,
     CardComponent
   ],
+  providers: [Api],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

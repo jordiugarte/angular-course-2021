@@ -17,10 +17,16 @@ export class Ejercicio1Component implements OnInit {
     //this.ngOnInit();
   }
 
-  constructor(private service: Api) {}
+  constructor(private service: Api) {
+    this.vaccinated = this.service
+      .getVaccinated()
+      .subscribe(s => console.log(s));
+    this.notVaccinated = this.service
+      .getUnvaccinated()
+      .subscribe(s => console.log(s));
+  }
 
   ngOnInit() {
-    this.vaccinated = this.service.getVaccinated();
-    this.notVaccinated = this.service.getUnvaccinated();
+    
   }
 }
