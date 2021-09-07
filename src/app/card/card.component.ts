@@ -39,7 +39,7 @@ export class CardComponent implements OnInit {
   }
 
   vaccine() {
-    /*var maxDoses = 0;
+    var maxDoses = 0;
     switch (this.item.vaccineType) {
       case 'A':
         maxDoses = 1;
@@ -49,11 +49,18 @@ export class CardComponent implements OnInit {
         maxDoses = 3;
     }
     if (this.item.doses < maxDoses - 1) {
-      this.item.doses += 1;
+      this.service
+        .addDose(this.item.key, { doses: this.item.key })
+        .subscribe(s => {
+          this.update.emit(this.item);
+        });
     } else {
       this.item.vaccined = 1;
+      this.service.delete(this.item.key).subscribe(s => {
+        this.service.vaccine(this.item).subscribe(s => {
+          this.update.emit(this.item);
+        });
+      });
     }
-    this.update.emit(this.item);*/
-    this.service.vaccine({ key: this.item.key });
   }
 }

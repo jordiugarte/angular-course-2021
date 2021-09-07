@@ -17,12 +17,12 @@ export class Api {
     return this.http.get(this.url + 'unvaccinated.json');
   }
 
-  public vaccine(element: any): Observable<any> {
-    return this.http.post(this.url + 'vaccinated.json', element);
+  public delete(key: string): Observable<any> {
+    return this.http.delete(this.url + 'unvaccinated/' + key + '.json');
   }
 
-  public delete(id: string): Observable<any> {
-    return this.http.delete(this.url + id + '.json');
+  public vaccine(element: any): Observable<any> {
+    return this.http.post(this.url + 'vaccinated.json', element);
   }
 
   public addDose(id: string, body: any): Observable<any> {

@@ -14,7 +14,7 @@ export class Ejercicio1Component implements OnInit {
     //console.log('item', event);
     //let index = this.data.findIndex(item => item.name === event.name);
     //this.data[index] = event;
-    //this.ngOnInit();
+    this.ngOnInit();
   }
 
   constructor(private service: Api) {
