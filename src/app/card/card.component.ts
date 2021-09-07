@@ -49,11 +49,10 @@ export class CardComponent implements OnInit {
         maxDoses = 3;
     }
     if (this.item.doses < maxDoses - 1) {
-      this.service
-        .addDose(this.item.key, { doses: this.item.key })
-        .subscribe(s => {
-          this.update.emit(this.item);
-        });
+      this.item.doses++;
+      this.service.addDose(this.item.key, this.item + 1).subscribe(s => {
+        this.update.emit(this.item);
+      });
     } else {
       this.item.vaccined = 1;
       this.service.delete(this.item.key).subscribe(s => {
