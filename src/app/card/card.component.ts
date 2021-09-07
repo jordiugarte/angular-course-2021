@@ -7,6 +7,7 @@ import {
   Output,
   ViewChild
 } from '@angular/core';
+import { Api } from '../ejercicio1/services/api.service';
 
 @Component({
   selector: 'app-card',
@@ -27,18 +28,19 @@ export class CardComponent implements OnInit {
 
   color = '';
 
-  constructor() {}
+  constructor(private service: Api) {}
 
   ngOnInit() {
     this.vaccined = this.item.vaccined === 1 ? true : false;
     this.baseDisease = this.item.disease;
     this.adult = this.item.age >= 18;
     this.color = this.vaccined ? 'green' : 'red';
-    this.vaccinable = this.adult && !this.baseDisease && !this.vaccined;
+    //this.vaccinable = this.adult && !this.baseDisease && !this.vaccined;
+    this.vaccinable = !this.vaccined;
   }
 
   vaccine() {
-    var maxDoses = 0;
+    /*var maxDoses = 0;
     switch (this.item.vaccineType) {
       case 'A':
         maxDoses = 1;
@@ -52,6 +54,7 @@ export class CardComponent implements OnInit {
     } else {
       this.item.vaccined = 1;
     }
-    this.update.emit(this.item);
+    this.update.emit(this.item);*/
+    service.vaccine(item.key);
   }
 }

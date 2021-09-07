@@ -24,12 +24,44 @@ export class Ejercicio1Component implements OnInit {
 
   ngOnInit() {
     this.service.getVaccinated().subscribe(s => {
-      console.log(s);
-      this.vaccinated = Object.values(s);
+      let array = [];
+      let index = 0;
+      for (let key in s) {
+        let item = Object.values(s)[index];
+        console.log(item);
+        array.push({
+          key: key,
+          age: item['age'],
+          date: item['date'],
+          disease: item['disease'],
+          doses: item['doses'],
+          name: item['name'],
+          vaccineType: item['vaccineType'],
+          vaccined: item['vaccined']
+        });
+        index++;
+      }
+      this.vaccinated = array;
     });
     this.service.getUnvaccinated().subscribe(s => {
-      console.log(s);
-      this.notVaccinated = Object.values(s);
+      let array = [];
+      let index = 0;
+      for (let key in s) {
+        let item = Object.values(s)[index];
+        console.log(item);
+        array.push({
+          key: key,
+          age: item['age'],
+          date: item['date'],
+          disease: item['disease'],
+          doses: item['doses'],
+          name: item['name'],
+          vaccineType: item['vaccineType'],
+          vaccined: item['vaccined']
+        });
+        index++;
+      }
+      this.notVaccinated = array;
     });
   }
 }

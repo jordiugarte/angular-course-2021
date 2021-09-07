@@ -5,20 +5,23 @@ import { environment } from '../environments/environment';
 
 @Injectable()
 export class Api {
-  vaccinated_url = environment.vaccinated_url;
-  unvaccinated_url = environment.unvaccinated_url;
+  url = environment.url;
 
   constructor(private http: HttpClient) {}
 
   public getVaccinated(): Observable<any> {
-    return this.http.get(this.vaccinated_url);
+    return this.http.get(this.url + 'vaccinated.json');
   }
 
   public getUnvaccinated(): Observable<any> {
-    return this.http.get(this.unvaccinated_url);
+    return this.http.get(this.url + 'unvaccinated.json');
   }
 
-  public vaccine(id: string): Observable<any> {
-    return this.http.get(this.unvaccinated_url + );
+  public vaccine(element: any): Observable<any> {
+    return this.http.post(this.url + 'vaccinated.json', element);
+  }
+
+  public delete(id: string): Observable<any> {
+    return this.http.delete(this.url + id + '.json');
   }
 }
