@@ -3,14 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { JuradosComponent } from './jurados/jurados.component';
-import { VotacionComponent } from './votacion/votacion.component';
+import { RoutingModule } from './routing/routing.module';
 import { LugarComponent } from './lugar/lugar.component';
-import { AppRoutingModule } from './routing/routing.module';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', redirectTo: '', pathMatch: 'full' },
+  {
+    path: 'jurados',
+    loadChildren: () =>
+      import('./jurados/jurados.module').then(m => m.JuradosModule)
+  },
+  {
+    path: 'votacion',
+    loadChildren: () =>
+      import('./votacion/votacion.module').then(m => m.VotacionModule)
+  },
+  { path: 'lugar', component: LugarComponent }
+];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
-  declarations: [JuradosComponent, VotacionComponent, LugarComponent],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  declarations: [AppComponent],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
