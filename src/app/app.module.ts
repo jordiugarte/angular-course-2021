@@ -23,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, FormsModule, RoutingModule],
   declarations: [AppComponent],
   providers: [],
   bootstrap: [AppComponent]
