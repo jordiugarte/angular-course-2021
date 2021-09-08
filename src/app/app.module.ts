@@ -8,7 +8,7 @@ import { LugarComponent } from './lugar/lugar.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '', redirectTo: 'jurados', pathMatch: 'full' },
   {
     path: 'jurados',
     loadChildren: () =>
