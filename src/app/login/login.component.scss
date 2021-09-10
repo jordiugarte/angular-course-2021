@@ -29,6 +29,7 @@
   }
 
   .right {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,6 +137,7 @@
       .create-new-account-btn:hover {
         background: #35ac1d;
       }
+
     }
 
     p {
@@ -154,5 +156,7 @@
         text-decoration: underline;
       }
     }
+
   }
+
 }
