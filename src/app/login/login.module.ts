@@ -12,6 +12,10 @@ import { Login1Component } from './components/login1/login1.component';
 import { Login2Component } from './components/login2/login2.component';
 import { UtilsService } from './services/utils.service';
 import { PublicationService } from './services/publication.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+
 const routes: Routes = [{ path: '', component: LoginComponent }];
 @NgModule({
   declarations: [LoginComponent, Login1Component, Login2Component],
@@ -23,7 +27,10 @@ const routes: Routes = [{ path: '', component: LoginComponent }];
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [Test1Service, UtilsService, PublicationService]
 })
