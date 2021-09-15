@@ -1,9 +1,9 @@
+import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PagesComponent} from './pages.component';
 import {RouterModule, Routes} from "@angular/router";
+import {HeaderComponent} from "./shared/components/header/header.component";
 import {SharedMaterialModule} from "../shared/shared-material.module";
-import { HeaderComponent } from '../shared/components/header/header.component';
-import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {

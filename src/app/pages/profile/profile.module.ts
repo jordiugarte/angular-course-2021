@@ -9,6 +9,7 @@ import {PostModule} from "../../shared/modules/post/post.module";
 const routes: Routes = [
   {path: '', component: ProfileComponent}
 ]
+
 @NgModule({
   declarations: [
     ProfileComponent

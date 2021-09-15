@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PublicationService } from 'src/app/shared/services/publications.service';
+import {PublicationService} from "../shared/services/publication.service";
 
 @Component({
   templateUrl: './home.component.html'
@@ -20,4 +20,5 @@ export class HomeComponent implements OnInit {
 
   onShowMessage():void{
   }
+
 }
