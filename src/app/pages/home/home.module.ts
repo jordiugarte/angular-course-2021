@@ -1,30 +1,27 @@
-import {HomeComponent} from './home.component';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
+import { PublicationService } from "src/app/shared/services/publications.service";
 import {SharedMaterialModule} from "../../shared/shared-material.module";
-import {MessageSenderComponent} from "./components/message-sender/message-sender.component";
-import {PostComponent} from "./components/post/post.component";
 import {SidebarComponent} from "./components/sidebar/sidebar.component";
 import {StoryComponent} from "./components/story/story.component";
-import { PublicationService } from 'src/app/shared/services/publications.service';
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { HomeComponent } from "./home.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent}
 ]
-
 @NgModule({
   declarations: [
     HomeComponent,
-    MessageSenderComponent,
-    PostComponent,
     SidebarComponent,
     StoryComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedMaterialModule
+    SharedMaterialModule,
+    PostModule,
+    MessageSenderModule
   ],
   providers: [
     PublicationService
