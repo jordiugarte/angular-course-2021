@@ -1,10 +1,11 @@
 import {NgModule} from '@angular/core';
 import {HeaderComponent} from "./header/header.component";
+import {MessageSenderComponent} from "./message-sender/message-sender.component";
+import {PostComponent} from "./post/post.component";
+import {SidebarComponent} from "./sidebar/sidebar.component";
+import {StoryComponent} from "./story/story.component";
 import {SharedMaterialModule} from "../../shared/shared-material.module";
-import { MessageSenderComponent } from './message-sender/message-sender.component';
-import { PostComponent } from './post/post.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { StoryComponent } from './story/story.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -22,9 +23,9 @@ import { StoryComponent } from './story/story.component';
     StoryComponent
   ],
   imports: [
+    RouterModule,
     SharedMaterialModule
   ]
 })
-
 export class LayoutModule {
 }
