@@ -4,6 +4,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthInterceptor} from "./core/interceptors/auth.interceptor";
 import {AuthService} from "./login/services/auth.service";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 
 const routes: Routes = [
@@ -32,4 +34,4 @@ const routes: Routes = [
     }
   ],
   bootstrap: [AppComponent]
-})
+})export class AppModule {}

@@ -1,13 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { PublicationService } from 'src/app/shared/services/publications.service';
 
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor(private publicationService: PublicationService) { }
 
-  onShowMessage(): void {}
+  ngOnInit(): void {
+
+    this.publicationService.getAll().subscribe(res => {
+
+      console.log('RES PUBLICATIONS', res);
+
+    })
+
+  }
+
+  onShowMessage():void{
+  }
 }
