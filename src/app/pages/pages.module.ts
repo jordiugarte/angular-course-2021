@@ -1,8 +1,9 @@
-import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PagesComponent} from './pages.component';
 import {RouterModule, Routes} from "@angular/router";
-import {LayoutModule} from "../core/layout/layout.module";
+import {SharedMaterialModule} from "../shared/shared-material.module";
+import { HeaderComponent } from '../core/layout/header/header.component';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
@@ -17,12 +18,13 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    PagesComponent
+    PagesComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
-    LayoutModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedMaterialModule
   ]
 })
 export class PagesModule {
