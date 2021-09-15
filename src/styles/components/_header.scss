@@ -9,7 +9,6 @@
     box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
     color: black;
     height: 56px;
-  
     .header__left {
       display: flex;
       align-items: center;
@@ -37,7 +36,6 @@
       justify-content: center;
       height: 100%;
     }
-  
     .header__option {
       width: 112px;
       display: flex;
@@ -82,10 +80,14 @@
       .material-icons:hover {
         cursor: pointer;
       }
+  
+      button + button {
+        margin-left: 10px;
+      }
     }
+  
     .user__avatar {
       border-radius: 50%;
       width: 45px;
     }
   }
-  
