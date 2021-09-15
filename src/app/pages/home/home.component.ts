@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PublicationService } from 'src/app/shared/services/publications.service';
 
 @Component({
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
 
