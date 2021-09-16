@@ -18,3 +18,6 @@ import {AuthGuard} from "./guards/auth.guard";
     AuthGuard
   ]
 })
+
+export class CoreModule {
+}
