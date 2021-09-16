@@ -7,9 +7,11 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { HomeComponent } from './home/home.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { DateFormatPipe } from './date-format.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { Api } from './home/services/api.service';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   declarations: [
     AppComponent,
     DateFormatPipe,
@@ -17,6 +19,7 @@ import { DateFormatPipe } from './date-format.pipe';
     TransactionComponent,
     WalletComponent,
   ],
+  providers: [Api],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   app: {
-    apiBaseUrl: 'https://facebook-project-em-default-rtdb.firebaseio.com',
+    apiBaseUrl: 'https://third-test-937b2-default-rtdb.firebaseio.com',
   },
 };
 
