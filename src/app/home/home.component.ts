@@ -48,13 +48,10 @@ export class HomeComponent implements OnInit {
         console.log(item);
         array.push({
           key: key,
-          date: item['date'],
-          from: item['from'],
-          to: item['to'],
-          quantity: item['quantity'],
-          moneyType: item['moneyType'],
-          mineType: item['mineType'],
-          miner: item['miner'],
+          wallet: item['wallet'],
+          name: item['name'],
+          eth: item['eth'],
+          btc: item['btc'],
         });
         index++;
       }
