@@ -2,10 +2,10 @@
 
 <p>Transactions: {{ transactions.length }}</p>
 <span *ngFor="let item of transactions">
-  <app-wallet [item]="item" (update)="update($event)"></app-wallet>
+  <app-transaction [item]="item" (update)="update($event)"></app-transaction>
 </span>
 
 <p>Wallets: {{ wallets.length }}</p>
 <span *ngFor="let item of wallets">
-  <app-transaction [item]="item" (update)="update($event)"></app-transaction>
+  <app-wallet [item]="item" (update)="update($event)"></app-wallet>
 </span>

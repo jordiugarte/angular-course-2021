@@ -20,22 +20,16 @@ export class TransactionComponent implements OnInit {
 
   @ViewChild('cardDiv') cardDiv: ElementRef;
 
-  vaccined = false;
-  baseDisease = false;
-  adult = false;
-
-  vaccinable = false;
-
+  pow = false;
+  clickeable = false;
   color = '';
 
   constructor(private service: Api) {}
 
   ngOnInit() {
-    this.vaccined = this.item.vaccined === 1 ? true : false;
-    this.baseDisease = this.item.disease;
-    this.adult = this.item.age >= 18;
-    this.color = this.vaccined ? 'green' : 'red';
-    this.vaccinable = this.adult && !this.baseDisease && !this.vaccined;
+    this.pow = this.item.mineType === 'PoW' ? true : false;
+    this.clickeable = this.pow || (!this.pow && this.item.miner > 5);
+    this.color = this.pow ? 'yellow' : 'green';
   }
 
   vaccine() {
