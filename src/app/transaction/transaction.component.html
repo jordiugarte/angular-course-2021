@@ -1,10 +1,11 @@
 <div style="background: {{ color }}; width: 200px; height: 300px;" #cardDiv>
-  <p>Date: {{ item.date | dateFormat | date: 'dd/MM/yyyy' }}</p>
+  <p>Date: {{ item.date | dateFormat | date: 'yyyy/MM/dd' }}</p>
   <p>From: {{ item.from }}</p>
   <p>To: {{ item.to }}</p>
   <p>Quantity: {{ item.quantity }}</p>
-  <p>Money type: {{ item.moneyType }}</p>
+  <p>moneyType: {{ item.moneyType }}</p>
   <p>Mine type: {{ item.mineType }}</p>
   <p>Miner: {{ item.miner }}</p>
-  <button [disabled]="!clickeable" onclick="mine()">Mine</button>
+  <button [disabled]="!clickeable" (click)="mine()">Mine</button>
+  <button (click)="edit()">Edit</button>
 </div>

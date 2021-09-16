@@ -1,4 +1,5 @@
-<p *ngIf="transactions.length === 0">EVERYBODY VACCINATED</p>
+<p *ngIf="transactions.length === 0">THERE ARE NOT TRANSACTIONS</p>
+<p>BTC: {{ ethQuantity }} ETH: {{ btcQuantity }}</p>
 
 <p>Transactions: {{ transactions.length }}</p>
 <span *ngFor="let item of transactions">
