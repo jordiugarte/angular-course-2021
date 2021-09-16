@@ -7,12 +7,12 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import { Api } from '../../home/services/api.service';
+import { Api } from '../home/services/api.service';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+  selector: 'app-transaction',
+  templateUrl: './transaction.component.html',
+  styleUrls: ['./transaction.component.css'],
 })
 export class TransactionComponent implements OnInit {
   @Input('item') item: any;

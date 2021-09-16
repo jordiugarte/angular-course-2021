@@ -1,0 +1,10 @@
+<div style="background: {{ color }}; width: 200px; height: 300px;" #cardDiv>
+  <p>Date: {{ item.date | dateFormat | date: 'dd/MM/yyyy' }}</p>
+  <p>From: {{ item.from }}</p>
+  <p>To: {{ item.to }}</p>
+  <p>Quantity: {{ item.quantity }}</p>
+  <p>Money type: {{ item.moneyType }}</p>
+  <p>Mine type: {{ item.mineType }}</p>
+  <p>Miner: {{ item.miner }}</p>
+  <button>Vacunar</button>
+</div>
