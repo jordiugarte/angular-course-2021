@@ -58,4 +58,18 @@ export class HomeComponent implements OnInit {
       this.wallets = array;
     });
   }
+
+  getFromTransaction(transaction: any): string {
+    var result = this.wallets.filter(
+      (item) => item.wallet === transaction.from
+    )[0];
+    return result;
+  }
+
+  getToTransaction(transaction: any): string {
+    var result = this.wallets.filter(
+      (item) => item.wallet === transaction.to
+    )[0];
+    return result;
+  }
 }

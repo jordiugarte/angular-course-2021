@@ -2,7 +2,12 @@
 
 <p>Transactions: {{ transactions.length }}</p>
 <span *ngFor="let item of transactions">
-  <app-transaction [item]="item" (update)="update($event)"></app-transaction>
+  <app-transaction
+    [item]="item"
+    [fromTransaction]="getFromTransaction(item)"
+    [toTransaction]="getToTransaction(item)"
+    (update)="update($event)"
+  ></app-transaction>
 </span>
 
 <p>Wallets: {{ wallets.length }}</p>

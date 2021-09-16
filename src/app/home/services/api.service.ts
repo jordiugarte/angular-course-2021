@@ -25,7 +25,7 @@ export class Api {
     return this.http.post(this.url + 'vaccinated.json', element);
   }
 
-  public addDose(id: string, body: any): Observable<any> {
-    return this.http.put(this.url + 'unvaccinated/' + id + '.json', body);
+  public changeQuantity(id: string, body: any): Observable<any> {
+    return this.http.patch(this.url + 'wallets/' + id + '.json', body);
   }
 }
