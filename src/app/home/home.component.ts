@@ -1,15 +1,64 @@
 import { Component, OnInit } from '@angular/core';
+import { Api } from './services/api.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  transactions: any;
+  wallets: any;
 
-  constructor() { }
-
-  ngOnInit() {
+  update(event: any) {
+    this.ngOnInit();
   }
 
+  constructor(private service: Api) {
+    this.transactions = [];
+    this.wallets = [];
+  }
+
+  ngOnInit() {
+    this.service.getTransactions().subscribe((s) => {
+      let array = [];
+      let index = 0;
+      for (let key in s) {
+        let item = Object.values(s)[index];
+        console.log(item);
+        array.push({
+          key: key,
+          date: item['date'],
+          from: item['from'],
+          to: item['to'],
+          quantity: item['quantity'],
+          moneyType: item['moneyType'],
+          mineType: item['mineType'],
+          miner: item['miner'],
+        });
+        index++;
+      }
+      this.transactions = array;
+    });
+    this.service.getWallets().subscribe((s) => {
+      let array = [];
+      let index = 0;
+      for (let key in s) {
+        let item = Object.values(s)[index];
+        console.log(item);
+        array.push({
+          key: key,
+          date: item['date'],
+          from: item['from'],
+          to: item['to'],
+          quantity: item['quantity'],
+          moneyType: item['moneyType'],
+          mineType: item['mineType'],
+          miner: item['miner'],
+        });
+        index++;
+      }
+      this.wallets = array;
+    });
+  }
 }
