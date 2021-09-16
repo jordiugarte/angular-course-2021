@@ -4,6 +4,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {SharedMaterialModule} from "../../shared/shared-material.module";
 import {MessageSenderModule} from "../../shared/modules/message-sender/message-sender.module";
 import {PostModule} from "../../shared/modules/post/post.module";
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {path: '', component: ProfileComponent}
