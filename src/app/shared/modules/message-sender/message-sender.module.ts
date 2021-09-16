@@ -1,3 +1,4 @@
+import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {MessageSenderComponent} from "./message-sender.component";
 import {SharedMaterialModule} from "../../shared-material.module";
@@ -23,3 +24,6 @@ import {PublicationService} from "../../../pages/shared/services/publication.ser
     PublicationService
   ]
 })
+
+export class MessageSenderModule {
+}

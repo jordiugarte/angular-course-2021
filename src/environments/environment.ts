@@ -5,11 +5,11 @@
 export const environment = {
   production: false,
   app: {
-    apiBaseUrl: "https://facebook-angular-course-default-rtdb.firebaseio.com"
+    apiBaseUrl: "https://angular-course-jordiugarte-default-rtdb.firebaseio.com"
   },
   auth: {
     apiBaseUrl: "https://identitytoolkit.googleapis.com",
-    key: "AIzaSyBqTVtoXVkcRcTtZ3uKtjR1wkjKO56xeIk"
+    key: "AIzaSyD7ZWczkv2h0RWKjcs1SEV7SsnZfdMu_Ko"
   }
 };
 
