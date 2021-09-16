@@ -1,11 +1,11 @@
-<p *ngIf="notVaccinated.length === 0">EVERYBODY VACCINATED</p>
+<p *ngIf="transactions.length === 0">EVERYBODY VACCINATED</p>
 
-<p>Wallets: {{ vaccinated.length }}</p>
+<p>Wallets: {{ transactions.length }}</p>
 <span *ngFor="let item of transactions">
   <app-transaction [item]="item" (update)="update($event)"></app-transaction>
 </span>
 
-<p>Transactions: {{ notVaccinated.length }}</p>
+<p>Transactions: {{ wallets.length }}</p>
 <span *ngFor="let item of wallets">
   <app-transaction [item]="item" (update)="update($event)"></app-transaction>
 </span>
