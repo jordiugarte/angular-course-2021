@@ -25,6 +25,10 @@ export class Api {
     return this.http.put(this.url + 'transactions/' + key + '.json', body);
   }
 
+  public create(body: any): Observable<any> {
+    return this.http.post(this.url + 'transactions.json', body);
+  }
+
   public changeQuantity(id: string, body: any): Observable<any> {
     return this.http.patch(this.url + 'wallets/' + id + '.json', body);
   }
