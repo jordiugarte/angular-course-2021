@@ -1,7 +1,8 @@
 <p *ngIf="transactions.length === 0">THERE ARE NOT TRANSACTIONS</p>
-<p>BTC: {{ ethQuantity }} ETH: {{ btcQuantity }}</p>
+<p align="right">BTC: {{ ethQuantity }} ETH: {{ btcQuantity }}</p>
 
 <p>Transactions: {{ transactions.length }}</p>
+<button >
 <span *ngFor="let item of transactions">
   <app-transaction
     [item]="item"

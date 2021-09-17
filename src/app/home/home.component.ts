@@ -9,8 +9,8 @@ import { Api } from './services/api.service';
 export class HomeComponent implements OnInit {
   transactions: any;
   wallets: any;
-  ethQuantity: any;
-  btcQuantity: any;
+  ethQuantity: number = 0;
+  btcQuantity: number = 0;
 
   update(event: any) {
     this.ngOnInit();
@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
       let index = 0;
       for (let key in s) {
         let item = Object.values(s)[index];
-        console.log(item);
         array.push({
           key: key,
           date: item['date'],
@@ -47,7 +46,6 @@ export class HomeComponent implements OnInit {
       let index = 0;
       for (let key in s) {
         let item = Object.values(s)[index];
-        console.log(item);
         array.push({
           key: key,
           wallet: item['wallet'],
@@ -56,11 +54,11 @@ export class HomeComponent implements OnInit {
           btc: item['btc'],
         });
         index++;
+        this.btcQuantity += Number(item['btc']);
+        this.ethQuantity += Number(item['eth']);
       }
       this.wallets = array;
     });
-
-    this.ethQuantity = this.wallets.reduce((acc, value) => acc + value);
   }
 
   getFromTransaction(transaction: any): string {
