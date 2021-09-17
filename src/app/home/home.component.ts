@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   wallets: any;
   ethQuantity: number = 0;
   btcQuantity: number = 0;
+  showCreate = false;
 
   update(event: any) {
     this.ngOnInit();

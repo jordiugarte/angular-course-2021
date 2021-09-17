@@ -9,3 +9,4 @@
   <button [disabled]="!clickeable" (click)="mine()">Mine</button>
   <button (click)="edit()">Edit</button>
 </div>
+<app-edit *ngIf="showCreate" (update)="update($event)"></app-edit>

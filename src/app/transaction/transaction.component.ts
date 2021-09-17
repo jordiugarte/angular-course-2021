@@ -28,6 +28,7 @@ export class TransactionComponent implements OnInit {
   btc = false;
   clickeable = false;
   color = '';
+  showCreate = false;
 
   constructor(private service: Api, private matDialog: MatDialog) {}
 
@@ -79,6 +80,6 @@ export class TransactionComponent implements OnInit {
   }
 
   edit() {
-    this.matDialog.open(EditComponent);
+    this.showCreate = true;
   }
 }

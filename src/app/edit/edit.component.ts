@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Api } from '../home/services/api.service';
 
 @Component({
@@ -9,13 +8,11 @@ import { Api } from '../home/services/api.service';
 })
 export class EditComponent implements OnInit {
   @Input('item') item: any = null;
+  @Output('update') update: EventEmitter<any> = new EventEmitter();
 
   title = '';
 
-  constructor(
-    private service: Api,
-    public dialogRef: MatDialogRef<EditComponent>
-  ) {}
+  constructor(private service: Api) {}
 
   ngOnInit(): void {
     this.title = this.item === null ? 'Crear' : 'Editar';
@@ -34,7 +31,7 @@ export class EditComponent implements OnInit {
           miner: form.value.miner,
         })
         .subscribe(() => {
-          this.dialogRef.close();
+          this.update.emit(this.item);
         });
     } else {
       this.service
@@ -47,7 +44,7 @@ export class EditComponent implements OnInit {
           miner: form.value.miner,
         })
         .subscribe(() => {
-          this.dialogRef.close();
+          this.update.emit(this.item);
         });
     }
   }
