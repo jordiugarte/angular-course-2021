@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Api } from './services/api.service';
 import { MatDialog } from '@angular/material/dialog';
-import { EditComponent } from '../edit/edit.component';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +15,7 @@ export class HomeComponent implements OnInit {
   showCreate = false;
 
   update(event: any) {
+    this.showCreate = false;
     this.ngOnInit();
   }
 
@@ -79,6 +79,6 @@ export class HomeComponent implements OnInit {
   }
 
   create() {
-    this.matDialog.open(EditComponent);
+    this.showCreate = !this.showCreate;
   }
 }

@@ -9,7 +9,6 @@ import {
 } from '@angular/core';
 import { Api } from '../home/services/api.service';
 import { MatDialog } from '@angular/material/dialog';
-import { EditComponent } from '../edit/edit.component';
 
 @Component({
   selector: 'app-transaction',
