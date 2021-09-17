@@ -39,10 +39,9 @@ export class TransactionComponent implements OnInit {
   }
 
   mine() {
-    var finalFromQuantity = this.fromWallet.btc - this.item.quantity;
-    var finalToQuantity = this.toWallet + this.item.quantity;
-    console.log('Incoming transaction', finalFromQuantity);
     if (this.btc) {
+      var finalFromQuantity = this.fromWallet.btc - this.item.quantity;
+      var finalToQuantity = this.toWallet + this.item.quantity;
       this.service
         .changeQuantity(this.fromWallet.key, {
           btc: finalFromQuantity,
@@ -51,6 +50,24 @@ export class TransactionComponent implements OnInit {
           this.service
             .changeQuantity(this.toWallet.key, {
               btc: finalToQuantity,
+            })
+            .subscribe((s) => {
+              this.service.delete(this.item.key).subscribe((s) => {
+                this.update.emit(this.item);
+              });
+            });
+        });
+    } else {
+      var finalFromQuantity = this.fromWallet.eth - this.item.quantity;
+      var finalToQuantity = this.toWallet + this.item.quantity;
+      this.service
+        .changeQuantity(this.fromWallet.key, {
+          eth: finalFromQuantity,
+        })
+        .subscribe((s) => {
+          this.service
+            .changeQuantity(this.toWallet.key, {
+              eth: finalToQuantity,
             })
             .subscribe((s) => {
               this.service.delete(this.item.key).subscribe((s) => {

@@ -25,6 +25,7 @@ export class EditComponent implements OnInit {
     if (this.item === null) {
       this.service
         .create({
+          date: new Date(),
           from: form.value.from,
           to: form.value.to,
           quantity: form.value.quantity,
@@ -38,7 +39,6 @@ export class EditComponent implements OnInit {
     } else {
       this.service
         .edit(this.item.key, {
-          date: new Date(),
           from: form.value.from,
           to: form.value.to,
           quantity: form.value.quantity,
