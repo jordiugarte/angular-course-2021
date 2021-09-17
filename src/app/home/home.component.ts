@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Api } from './services/api.service';
+import { MatDialog } from '@angular/material/dialog';
+import { EditComponent } from '../edit/edit.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +18,7 @@ export class HomeComponent implements OnInit {
     this.ngOnInit();
   }
 
-  constructor(private service: Api) {
+  constructor(private service: Api, private matDialog: MatDialog) {
     this.transactions = [];
     this.wallets = [];
   }
@@ -73,5 +75,9 @@ export class HomeComponent implements OnInit {
       (item) => item.wallet === transaction.to
     )[0];
     return result;
+  }
+
+  create() {
+    this.matDialog.open(EditComponent);
   }
 }
