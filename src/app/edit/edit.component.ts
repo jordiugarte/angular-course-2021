@@ -38,6 +38,7 @@ export class EditComponent implements OnInit {
     } else {
       this.service
         .edit(this.item.key, {
+          date: new Date(),
           from: form.value.from,
           to: form.value.to,
           quantity: form.value.quantity,
